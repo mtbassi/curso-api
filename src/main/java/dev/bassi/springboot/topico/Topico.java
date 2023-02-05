@@ -1,7 +1,14 @@
 package dev.bassi.springboot.topico;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_topico")
 public class Topico {
-	
+
+	@Id
 	private String id;
 	private String nome;
 	private String descricao;

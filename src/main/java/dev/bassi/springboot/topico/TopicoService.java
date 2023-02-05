@@ -18,4 +18,15 @@ public class TopicoService {
 		return topicos;
 	}
 
+	public Topico getTopicoById(String id) {
+		return topicoRepository.findById(id).orElse(null);
+	}
+
+	public void addTopico(Topico topico) {
+		topicoRepository.save(topico);
+	}
+
+    public void updateTopico(Topico topico, String id) {
+    	topicoRepository.save(topico);
+	}
 }
