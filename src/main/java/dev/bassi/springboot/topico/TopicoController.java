@@ -25,5 +25,10 @@ public class TopicoController {
 	public void addTopico(@RequestBody Topico topico){
 		topicoService.addTopico(topico);
 	}
+
+	@RequestMapping(method = RequestMethod.PUT, value = "/topicos/{id}")
+	public void updateTopico(@RequestBody Topico topico, @PathVariable String id){
+		topicoService.updateTopico(topico, id);
+	}
 	
 }
