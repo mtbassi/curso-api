@@ -29,4 +29,8 @@ public class TopicoService {
     public void updateTopico(Topico topico, String id) {
     	topicoRepository.save(topico);
 	}
+
+	public void deleteTopicoById(String id) {
+		topicoRepository.deleteById(id);
+	}
 }
